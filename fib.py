@@ -2,7 +2,6 @@
 calculates the fibonacci sequence using 3 different algorithms
 '''
 
-
 def __fib_recur(n):
     '''
     brute force fiboncacci solution
@@ -18,7 +17,6 @@ def __fib_recur(n):
 
     return result
 
-
 def fib_recursive(n):
     '''
     slow recursive solution
@@ -30,7 +28,6 @@ def fib_recursive(n):
         total += __fib_recur(i)
 
     return total
-
 
 def __fib_recursive_dp(n, cache):
     '''
@@ -46,7 +43,7 @@ def __fib_recursive_dp(n, cache):
         return 0
     if n == 1:
         return 1
-
+    
     # recursion
     result = __fib_recursive_dp(n-1, cache) + __fib_recursive_dp(n-2, cache)
 
@@ -54,7 +51,6 @@ def __fib_recursive_dp(n, cache):
     cache[n] = result
 
     return result
-
 
 def fib_recursive_dp(n):
     '''

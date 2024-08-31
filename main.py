@@ -3,13 +3,11 @@ import time
 
 NANOSECONDS_TO_SECONDS = 1000000
 
-
 def print_result(result, start, stop, n):
     diff = (stop - start) * NANOSECONDS_TO_SECONDS
     print(f'the slow implementation runs in {diff:.1f} nanoseconds')
     print(f'the total sum of fib({n}) = {result}')
     print()
-
 
 def main():
 
@@ -38,6 +36,5 @@ def main():
     fastest_total = fib.fib_iterative_dp(n)
     stop = time.perf_counter()
     print_result(fastest_total, start, stop, n)
-
 
 main()

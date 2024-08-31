@@ -5,14 +5,12 @@ import pytest
 import random
 import fib
 
-
 def test_success_base_conditions():
     '''
     test base conditions
     '''
     assert fib.fib_recursive(0) == 0
     assert fib.fib_recursive(1) == 1
-
 
 def test_success_n_greater_1():
     '''
@@ -21,7 +19,6 @@ def test_success_n_greater_1():
     assert fib.fib_recursive(3) == 4
     assert fib.fib_recursive(10) == 143
     assert fib.fib_recursive(15) == 1596
-
 
 def test_success_fib_all():
     '''
@@ -32,7 +29,6 @@ def test_success_fib_all():
         assert f(10) == 143
         assert f(15) == 1596
 
-
 def test_success_fib_match():
     '''
     test all, and checks 5 random values match
@@ -42,7 +38,6 @@ def test_success_fib_match():
         match = fib.fib_recursive(val) == fib.fib_recursive_dp(val) \
             == fib.fib_iterative_dp(val)
         assert (match)
-
 
 def test_failure():
     '''
